@@ -1,3 +1,4 @@
+console.log("Script of Looping");
 const basket = ['apples', 'oranges', 'grapes'];
 const detailedBasket = {
   apples: 5,
@@ -28,7 +29,7 @@ for (item of basket) {
 // an array as a parameter and returns the biggest number.
 // biggestNumberInArray([-1,0,3,100, 99, 2, 99]) should return 100;
 // Use at least 3 different types of javascript loops to write this:
-const array = [-1,0,3,100, 99, 2, 99] // should return 100
+const array1 = [-1,0,3,100, 99, 2, 99] // should return 100
 const array2 = ['a', 3, 4, 2] // should return 4
 const array3 = [] // should return 0
 
@@ -62,8 +63,10 @@ function biggestNumberInArray3(arr) {
   return highest;
 }
 
+console.log(biggestNumberInArray(array1));
+console.log(biggestNumberInArray2(array2));
+console.log(biggestNumberInArray3(array3));
 
-biggestNumberInArray3(array3)
 
 
 // Question #2:
@@ -82,3 +85,4 @@ function checkBasket(basket, lookingFor) {
   }
   return 'that does not exist in your basket'
 }
+console.log(checkBasket(amazonBasket,amazonBasket.book));

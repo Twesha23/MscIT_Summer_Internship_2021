@@ -1,3 +1,4 @@
+console.log("Script of Arrays");
 // Complete the below questions using this array:
 const array = [
 	{
@@ -58,14 +59,14 @@ console.log(total);
 
 // (1), what is the value of i? INDEX of the array.
 // (2), Make this map function pure:
-const arrayNum = [1, 2, 4, 5, 8, 9];
-const newArray = arrayNum.map((num, i) => {
+const arrayNum1 = [1, 2, 4, 5, 8, 9];
+const newArray1 = arrayNum1.map((num, i) => {
 	return num * 2;
 })
+console.log(newArray1);
 
 
-
-//BONUS: create a new list with all user information, but add "!" to the end of each items they own.
+// create a new list with all user information, but add "!" to the end of each items they own.
 const answer = array.map(user => {
 	user.items = user.items.map(item => {
 		return item + "!"

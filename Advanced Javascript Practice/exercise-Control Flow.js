@@ -1,13 +1,4 @@
-//#1 change this function into a ternary and assign it to variable called experiencePoints
-function experiencePoints() {
-    if (winBattle()) {
-        return 10;
-    } else {
-        return 1;
-    }
-}
-
-var experiencePoints = winBattle() ? 10 : 1;
+console.log("Script of Control Flow");
 
 //Using this function, answer the questions below:
 function moveCommand(direction) {
@@ -33,15 +24,23 @@ function moveCommand(direction) {
     return whatHappens;
 }
 
-//#2 return value when moveCommand("forward");
-undefined
+//#1 return value when 
+var ans = moveCommand("forward");
+console.log(ans);
+//undefined
 
-//#3 return value when moveCommand("back");
-"you arrived home"
+//#2 return value when 
+var ans = moveCommand("back");
+console.log(ans);
+//"you arrived home"
 
-//#4 return value when moveCommand("right");
-"you found a river"
+//#3 return value when
+ var ans = moveCommand("right");
+ console.log(ans);
+//"you found a river"
 
-//#5 return value when moveCommand("left");
-undefined
+//#4 return value when 
+var ans = moveCommand("left");
+console.log(ans);
+//undefined
 

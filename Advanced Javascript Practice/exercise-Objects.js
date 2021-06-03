@@ -1,6 +1,4 @@
-//Evaluate these:
-//#1
-[2] === [2] // false
+console.log("Script of Objects")
 
 //#2 what is the value of property a for each object.
 const object1 = { a: 5 }; // 4
@@ -8,6 +6,12 @@ const object2 = object1; // 4
 const object3 = object2; // 4
 const object4 = { a: 5}; // 5
 object1.a = 4;
+
+console.log("Object1",object1);
+console.log("Object2",object2);
+console.log("Object3",object3);
+console.log("Object4",object4);
+
 
 
 //#3 create two classes: an Animal class and a Mamal class. 
@@ -30,3 +34,5 @@ class Mamal extends Animal {
 }
 
 const cow = new Mamal('Shelly', 'cow', 'brown');
+console.log(cow);
+
