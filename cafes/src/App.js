@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
 import Scroll from './Scroll';
-
+import ErrorBoundary from './ErrorBoundary';
 import {cafes} from './Cafe';
 
 class App extends Component {
@@ -15,10 +15,10 @@ class App extends Component {
   }
 
   // componentDidMount() {
-  //   fetch('https://jsonplaceholder.typicode.com/users')
-  //     .then(response=> response.json())
-  //     .then(users => {this.setState({ cafes: users})});
-  // }
+  //    fetch('https://jsonplaceholder.typicode.com/users')
+  //      .then(response=> response.json())
+  //      .then(users => {this.setState({ cafes: users})});
+  //  }
 
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value })
@@ -35,7 +35,10 @@ class App extends Component {
         <div className='tc'>
           <SearchBox searchChange={this.onSearchChange}/>
           <Scroll>
-               <CardList cafes={filteredcafes} />
+            <ErrorBoundary>
+            <CardList cafes={filteredcafes} />
+            </ErrorBoundary>
+               
           </Scroll>
         </div>
       );
