@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/MscIT_Summer_Internship_2021/cafes/static/css/main.e57a02a7.chunk.css",
-    "main.js": "/MscIT_Summer_Internship_2021/cafes/static/js/main.cb140dd9.chunk.js",
-    "main.js.map": "/MscIT_Summer_Internship_2021/cafes/static/js/main.cb140dd9.chunk.js.map",
-    "runtime-main.js": "/MscIT_Summer_Internship_2021/cafes/static/js/runtime-main.944a937d.js",
-    "runtime-main.js.map": "/MscIT_Summer_Internship_2021/cafes/static/js/runtime-main.944a937d.js.map",
-    "static/css/2.c1f4f5f4.chunk.css": "/MscIT_Summer_Internship_2021/cafes/static/css/2.c1f4f5f4.chunk.css",
-    "static/js/2.d8aff3a7.chunk.js": "/MscIT_Summer_Internship_2021/cafes/static/js/2.d8aff3a7.chunk.js",
-    "static/js/2.d8aff3a7.chunk.js.map": "/MscIT_Summer_Internship_2021/cafes/static/js/2.d8aff3a7.chunk.js.map",
-    "static/js/3.8e7be092.chunk.js": "/MscIT_Summer_Internship_2021/cafes/static/js/3.8e7be092.chunk.js",
-    "static/js/3.8e7be092.chunk.js.map": "/MscIT_Summer_Internship_2021/cafes/static/js/3.8e7be092.chunk.js.map",
-    "index.html": "/MscIT_Summer_Internship_2021/cafes/index.html",
-    "static/css/2.c1f4f5f4.chunk.css.map": "/MscIT_Summer_Internship_2021/cafes/static/css/2.c1f4f5f4.chunk.css.map",
-    "static/css/main.e57a02a7.chunk.css.map": "/MscIT_Summer_Internship_2021/cafes/static/css/main.e57a02a7.chunk.css.map",
-    "static/js/2.d8aff3a7.chunk.js.LICENSE.txt": "/MscIT_Summer_Internship_2021/cafes/static/js/2.d8aff3a7.chunk.js.LICENSE.txt",
-    "static/media/Head.css": "/MscIT_Summer_Internship_2021/cafes/static/media/SEGA.8a619f32.TTF"
+    "main.css": "/MscIT_Summer_Internship_2021/static/css/main.ed5145b0.chunk.css",
+    "main.js": "/MscIT_Summer_Internship_2021/static/js/main.cb140dd9.chunk.js",
+    "main.js.map": "/MscIT_Summer_Internship_2021/static/js/main.cb140dd9.chunk.js.map",
+    "runtime-main.js": "/MscIT_Summer_Internship_2021/static/js/runtime-main.f55f7d7e.js",
+    "runtime-main.js.map": "/MscIT_Summer_Internship_2021/static/js/runtime-main.f55f7d7e.js.map",
+    "static/css/2.c1f4f5f4.chunk.css": "/MscIT_Summer_Internship_2021/static/css/2.c1f4f5f4.chunk.css",
+    "static/js/2.d8aff3a7.chunk.js": "/MscIT_Summer_Internship_2021/static/js/2.d8aff3a7.chunk.js",
+    "static/js/2.d8aff3a7.chunk.js.map": "/MscIT_Summer_Internship_2021/static/js/2.d8aff3a7.chunk.js.map",
+    "static/js/3.8e7be092.chunk.js": "/MscIT_Summer_Internship_2021/static/js/3.8e7be092.chunk.js",
+    "static/js/3.8e7be092.chunk.js.map": "/MscIT_Summer_Internship_2021/static/js/3.8e7be092.chunk.js.map",
+    "index.html": "/MscIT_Summer_Internship_2021/index.html",
+    "static/css/2.c1f4f5f4.chunk.css.map": "/MscIT_Summer_Internship_2021/static/css/2.c1f4f5f4.chunk.css.map",
+    "static/css/main.ed5145b0.chunk.css.map": "/MscIT_Summer_Internship_2021/static/css/main.ed5145b0.chunk.css.map",
+    "static/js/2.d8aff3a7.chunk.js.LICENSE.txt": "/MscIT_Summer_Internship_2021/static/js/2.d8aff3a7.chunk.js.LICENSE.txt",
+    "static/media/Head.css": "/MscIT_Summer_Internship_2021/static/media/SEGA.8a619f32.TTF"
   },
   "entrypoints": [
-    "static/js/runtime-main.944a937d.js",
+    "static/js/runtime-main.f55f7d7e.js",
     "static/css/2.c1f4f5f4.chunk.css",
     "static/js/2.d8aff3a7.chunk.js",
-    "static/css/main.e57a02a7.chunk.css",
+    "static/css/main.ed5145b0.chunk.css",
     "static/js/main.cb140dd9.chunk.js"
   ]
 }
