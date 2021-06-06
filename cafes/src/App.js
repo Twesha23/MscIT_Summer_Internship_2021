@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
-//import Scroll from '../components/Scroll';
+import Scroll from './Scroll';
 
 import {cafes} from './Cafe';
 
@@ -26,17 +26,17 @@ class App extends Component {
 
   render() {
     const { cafes, searchfield } = this.state;
-    const filteredcafes = cafes.filter(robot =>{
-      return robot.name.toLowerCase().includes(searchfield.toLowerCase());
+    const filteredcafes = cafes.filter(cafe =>{
+      return cafe.name.toLowerCase().includes(searchfield.toLowerCase());
     })
     return !cafes.length ?
       <h1>Loading</h1> :
       (
         <div className='tc'>
           <SearchBox searchChange={this.onSearchChange}/>
-          
-            <CardList cafes={filteredcafes} />
-         
+          <Scroll>
+               <CardList cafes={filteredcafes} />
+          </Scroll>
         </div>
       );
   }
