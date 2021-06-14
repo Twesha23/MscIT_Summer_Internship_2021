@@ -9,27 +9,19 @@ body {
 }
 
 .App {
-  background-image: url('./bg-images/cold.jpg');
-  background-size:cover;
+  background-image: linear-gradient(to right, #02daff, #00c3ff, #00aaff, #008dff, #006aff, #006aff, #006aff, #006aff, #008dff, #00aaff, #00c3ff, #02daff);
+   background-size:cover;
   background-position: top;
   transition: 0.4 ease;
 }
 
 .App.warm {
-  background-image: url('./bg-images/warm.jpg');
+  background-image: radial-gradient(circle, #ff7800, #ff8b00, #ff9e00, #ffb000, #ffc200, #ffc200, #ffc200, #ffc200, #ffb000, #ff9e00, #ff8b00, #ff7800);
 }
 
-.App.snowy {
-  background-image: url('./bg-images/snowy.jpg');
-}
-
-.App.rainy {
-  background-image: url('./bg-images/rainy.jpg');
-}
 
 main {
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
   padding: 25px;
 }
 
@@ -85,15 +77,16 @@ main {
 
 .weather-box .temp {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
   margin: 30px auto;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
 
-  padding: 15px 25px;
+  padding: 15px 100px;
 
   color: #FFF;
-  font-size: 102px;
+  font-size: 80px;
   font-weight: 900;
 
   text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
@@ -106,4 +99,9 @@ main {
   font-size: 48px;
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+.imgcss {
+  background-color: lightblue;
+  border-radius: 50%;
+  box-shadow: 2px 2px 13px 2px white;
 }
