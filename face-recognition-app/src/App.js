@@ -4,7 +4,7 @@ import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
-import WelcomeMsg from './components/WelcomeMsg/WelcomeMsg';
+import Rank from './components/Rank/Rank';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Clarifai from 'clarifai';
@@ -124,7 +124,7 @@ class App extends Component {
         { 
           route === 'home' ? 
           <div>
-            <WelcomeMsg name={this.state.user.name} entries={this.state.user.entries}/>
+            <Rank name={this.state.user.name} entries={this.state.user.entries}/>
             <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
             <FaceRecognition imageURL={imageURL} box={box}/>
           </div>

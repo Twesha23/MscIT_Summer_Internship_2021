@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WelcomeMsg = ({name, entries}) => {
+const Rank = ({name, entries}) => {
     return (
         <div style={{clear: 'left'}}>
             <div className="fa2 white b">
@@ -13,4 +13,4 @@ const WelcomeMsg = ({name, entries}) => {
     )
 }
 
-export default WelcomeMsg;
+export default Rank;
