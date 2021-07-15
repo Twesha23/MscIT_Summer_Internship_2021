@@ -114,7 +114,7 @@ app.put('/imageEntry',(req,res) => {image.handleImageEntry(req,res,UserModel)})
     // if(!found){
     //     res.status(400).json("No such user found");
     // }
-    app.post('/imageURL',(req,res) => {image.handleAPICall(req,res)})
+app.post('/imageURL',(req,res) => {image.handleAPICall(req,res)})
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");

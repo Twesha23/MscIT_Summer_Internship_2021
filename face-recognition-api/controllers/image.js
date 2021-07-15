@@ -5,7 +5,7 @@ const app = new Clarifai.App({
    });
 
 const handleAPICall=(req,res)=>{
-    app.models.predict(Clarifai.FACE_DETECT_MODEL,req.body.imageURL)
+    app.models.predict(Clarifai.LOGO_MODEL,req.body.imageURL)
     .then(data=>{
         res.json(data)
     })
@@ -14,14 +14,14 @@ const handleAPICall=(req,res)=>{
 
 
 const handleImageEntry = (req,res,UserModel) => {
-    const {user,faces_detected} = req.body;
+    const {user,logos_detected} = req.body;
     UserModel
     .findOneAndUpdate(
         {
         _id: user.id  // search query
         }, 
         Object.assign(user,{                                //Updation
-            entries: Number(user.entries + faces_detected)
+            entries: Number(user.entries + logos_detected)
         }),
         {
             new: true,                       // return updated doc
