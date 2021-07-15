@@ -6,7 +6,7 @@ import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import Rank from './components/Rank/Rank';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
-import FaceRecognition from './components/FaceRecognition/FaceRecognition';
+import LogoRecognition from './components/LogoRecognition/LogoRecognition';
 import './App.css';
 
 const particlesOptions = {
@@ -26,10 +26,11 @@ const particlesOptions = {
  const initialstate = {
   input: '',
   imageURL: '',
-  faceBoxes: [{}],
-  isFaceDetected:null,
+  logoBoxes: [],
+  islogoDetected:null,
   route: 'login',
   isLoggedIn: false,
+  hasError:false,
   user: {
     id: '',
     name: '',
@@ -78,21 +79,25 @@ class App extends Component {
   
 
 
-  calculateFaceBoxSize = (regions) => {
-    const boxes = [{}];
+  calculatelogoBoxSize = (regions) => {
+    const boxes = [];
     const image = document.getElementById('inputImage');
     const width = image.width;
     const height = image.height;
     regions.forEach(region => {
-      const clarifaiFaceBox = region.region_info.bounding_box;
+      const clarifailogoBox = region.region_info.bounding_box;
+      const logo=region.data.concepts[0];
       boxes.push({
-        topRow: clarifaiFaceBox.top_row * height,
-        leftCol: clarifaiFaceBox.left_col * width,
-        bottomRow: height - (clarifaiFaceBox.bottom_row * height),
-        rightCol: width - (clarifaiFaceBox.right_col * width)
+        topRow: clarifailogoBox.top_row * height,
+        leftCol: clarifailogoBox.left_col * width,
+        bottomRow: height - (clarifailogoBox.bottom_row * height),
+        rightCol: width - (clarifailogoBox.right_col * width),
+        logoName:logo.name,
+        logoPrecision:logo.value,
       });
     });
-    this.setState({faceBoxes : boxes});
+    this.setState({logoBoxes : boxes});
+    console.log(boxes);
   }
 
   onInputChange= (event) => {
@@ -111,6 +116,10 @@ class App extends Component {
     .then(response => response.json())
     .then(response => {
       console.log(response);
+      if(typeof(response)=== "string" && response.includes('Error')){
+        this.setState({hasError:true});
+        console.error("Error encountered:",response);
+      }
       const regions = response.outputs[0].data.regions;
       if(regions){
         fetch('http://localhost:3000/imageEntry', {
@@ -118,7 +127,7 @@ class App extends Component {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
                 user: this.state.user,
-                faces_detected: regions.length
+                logos_detected: regions.length
             })
             })
             .then(response => response.json())
@@ -126,18 +135,18 @@ class App extends Component {
                 this.setState(Object.assign(this.state.user,{entries: count}))      
             })
             .catch(error => console.error('Error encountered: ', error));
-        this.setState({isFaceDetected: true});
-        this.calculateFaceBoxSize(regions);
+        this.setState({islogoDetected: true});
+        this.calculatelogoBoxSize(regions);
       } 
       else{
-        this.setState({faceBoxes: [{}], isFaceDetected: false});
+        this.setState({logoBoxes: [], islogoDetected: false});
       }
       })
     .catch(err => console.error('Error encountered:', err));
   }
 
   render(){
-    const { imageURL, faceBoxes, route, isLoggedIn , isFaceDetected} = this.state;
+    const { imageURL, logoBoxes, route, isLoggedIn , islogoDetected} = this.state;
     return (
       <div className="App">
         <Particles className="particles" params={particlesOptions}/>
@@ -148,7 +157,7 @@ class App extends Component {
           <div>
             <Rank name={this.state.user.name} entries={this.state.user.entries}/>
             <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
-            <FaceRecognition imageURL={imageURL} faceBoxes={faceBoxes} isFaceDetected={isFaceDetected}/>
+            <LogoRecognition imageURL={imageURL} logoBoxes={logoBoxes} islogoDetected={islogoDetected} hasError={this.state.hasError}/>
           </div>
           : ( route === 'login' ? 
               <Login onRouteChange={this.onRouteChange} loadUser={this.loadUser}/>
