@@ -1,6 +1,6 @@
 import React from 'react';
 import Tilt from 'react-tilt';
-import logo from './face-detection.jpg';
+import logo from './logo-detection.svg';
 
 const Logo = () => {
     return (
@@ -12,7 +12,7 @@ const Logo = () => {
             </Tilt> 
             <div className="fl w-75 pa3 f3 b">
                 <h1>
-                        Face Recognition App
+                        Logo Recognition App
                 </h1> 
             </div> 
         </div>
