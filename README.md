@@ -34,3 +34,12 @@ React app that contains list of cards having robots details and provides search 
  
 **Task 1 - Weather App**
 Created Weather App in React JS using Open weather API with dynamic background change based on the temperature
+**
+Mongodb practice**
+Practice of mongoose concepts - created mail and user collections, and perfromed crud and other db operations on it
+
+**NovelManagement**
+Novel Management System's frontend and backend - Features: Add, Update, View, Delete a book, Show list of all books
+
+**logo-recognition-app & logo-recgnition-API**
+Logo Recognition app's frontend and backend parts - this app will detect logod from your pictures and returns a probability score based on the likelihood that the detected logo is the logo of a recognized brand.
