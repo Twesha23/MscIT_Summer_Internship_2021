@@ -21,9 +21,9 @@ Contains advanced javascripts topics
 **Asynchronous JS**
 promise, async await, async functions with for await of loops
 
-**cafes **
+**cafes**
 React app that contains list of cards having cafes details and provides search by name facility.
-https://twesha23.github.io/MscIT_Summer_Internship_2021/
+
 
 **Robots-Redux**
 React app that contains list of cards having robots details and provides search by name facility.
@@ -34,8 +34,9 @@ React app that contains list of cards having robots details and provides search 
  
 **Task 1 - Weather App**
 Created Weather App in React JS using Open weather API with dynamic background change based on the temperature
-**
-Mongodb practice**
+https://twesha23.github.io/MscIT_Summer_Internship_2021/
+
+**Mongodb practice**
 Practice of mongoose concepts - created mail and user collections, and perfromed crud and other db operations on it
 
 **NovelManagement**
@@ -43,3 +44,4 @@ Novel Management System's frontend and backend - Features: Add, Update, View, De
 
 **logo-recognition-app & logo-recgnition-API**
 Logo Recognition app's frontend and backend parts - this app will detect logod from your pictures and returns a probability score based on the likelihood that the detected logo is the logo of a recognized brand.
+https://logo-recognition-app.herokuapp.com/
