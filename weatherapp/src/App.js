@@ -20,17 +20,26 @@ function App() {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
+          console.log(result);
+          if(result.weather){
           setting(
             `http://openweathermap.org/img/wn/${result.weather[0].icon}.png`
           );
-          setdisc(result.weather[0].description);
-          setWeather(result);
-          setQuery('');
           
-          console.log(result);
-        });
-    }
-  }
+          setdisc(result.weather[0].description);
+          }
+          setWeather(result);
+          //setQuery();
+          
+          
+         })
+        .catch(error => {
+          throw(error);
+        })
+    };
+    
+  };
+  
   var options = {
     year: "numeric",
     month: "long",
@@ -40,7 +49,7 @@ function App() {
   date = date.toLocaleDateString("en-US", options);
 
   return (
-    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 20) ? 'App warm' : 'App') : 'App'}>
+    <div className={(typeof weather.main !== "undefined" && weather.cod!=="404") ? ((weather.main.temp > 20) ? 'App warm' : 'App') : 'App'}>
     
       <main>
         <div className="search-box">
@@ -53,8 +62,10 @@ function App() {
             onKeyPress={search}
           />
         </div>
-        {(typeof weather.main != "undefined") ? (
+        {(typeof weather.main !== "undefined") ? (
         <div>
+           {weather.cod !== "404" ? (
+            <div>
           <div className="location-box">
             <div className="location">{weather.name}, {weather.sys.country}</div>
             <div className="date">{date}</div>
@@ -76,8 +87,12 @@ function App() {
             <div className="weather">{disc}</div>
             <img src={img} alt="weather icon" className="imgcss" />
           </div>
+          </div>
+          ):(
+            <h2>{weather.message}</h2>
+          )}
         </div>
-        ) : ('')}
+        ) : (<h2>{weather.message}</h2>)}
       </main>
     </div>
   );
